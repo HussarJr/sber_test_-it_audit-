@@ -26,7 +26,6 @@ class Program
             Console.Clear();
             Console.WriteLine("Выберите действие:\n1) Вывести на экран\n2) Cохранить в txt\n");
             int flag = 0;
-            //string filePath = """C:\Users\igusa\Downloads\data-20230901-structure-20180828.csv""";
             Dictionary<string, HashSet<string>> authorsByCountry = ExtractAuthorsByCountry(filePath);
             var t = Console.ReadKey();
             if (t.Key == ConsoleKey.D1)
@@ -52,12 +51,6 @@ class Program
                     }
                     break;
                 case 2:
-                    string userDownloadsFolder = Environment.GetFolderPath(Environment.SpecialFolder.UserProfile) + "\\Загрузки";
-
-                    if (!Directory.Exists(userDownloadsFolder))
-                    {
-                        Directory.CreateDirectory(userDownloadsFolder);
-                    }
                     string outputPath = Path.Combine(Environment.GetFolderPath(Environment.SpecialFolder.UserProfile), "Загрузки", "результат.txt");
                     using (StreamWriter writer = new StreamWriter(outputPath))
                     {
