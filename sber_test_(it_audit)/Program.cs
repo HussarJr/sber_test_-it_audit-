@@ -73,7 +73,7 @@ class Program
                     Console.WriteLine($"Результат сохранен в файле '{outputPath}'.");
                     break;
                 default:
-                    Console.WriteLine("Выбран не правильный параметр");
+                    Console.WriteLine("Выбран неправильный параметр");
                     break;
             }
         } catch (Exception ex) 
